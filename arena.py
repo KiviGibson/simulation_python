@@ -11,7 +11,7 @@ class Area:
         self.min_y = -y
         self.objects = []
 
-    def find_in_distance(self, who: Animal) -> list:
+    def find_in_range(self, who: Animal) -> list:
         targets = [i for i in self.objects if i != who]
         result = []
         pos = who.pos
@@ -20,3 +20,11 @@ class Area:
             if dist < who.distance:
                 result.append(target)
         return result
+
+    def add_object(self, obj: object) -> None:
+        """
+        add object to simulation area
+        :param obj: object that will be added
+        :return:
+        """
+        self.objects.append(obj)
