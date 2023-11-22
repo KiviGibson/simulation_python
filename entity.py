@@ -1,9 +1,8 @@
 from vector2 import Vector2
-from area import Area
 
 
 class Object:
-    def __init__(self, x: int, y: int, area):
+    def __init__(self, x: float, y: float, area: object):
         self.pos = Vector2(x, y)
         self.area = area
 
