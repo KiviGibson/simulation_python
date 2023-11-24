@@ -1,5 +1,5 @@
 import math
-from animal import Animal
+from entities.animal import Animal
 
 
 class Area:

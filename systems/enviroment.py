@@ -1,6 +1,6 @@
 from vector2 import Vector2
 from arena import Area
-from animal import Animal
+from entities.animal import Animal
 from random import randrange
 
 
@@ -22,7 +22,9 @@ class Enviroment:
         ...
 
     def start(self) -> None:
-        ...
+        for e in self.area.objects:
+            if isinstance(e, Animal):
+                e.find_target()
 
     def spawn(self, x: float, y: float, speed: float) -> None:
         ani = Animal(x, y, self.area, speed=speed)
