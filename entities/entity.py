@@ -15,5 +15,8 @@ class Object:
     def pos(self, pos: Vector2) -> None:
         self._pos = pos
 
+    def behaviour(self):
+        ...
+
     def __str__(self):
         return f"{self.name}: {str(self.pos.x)}, {str(self.pos.y)}"
